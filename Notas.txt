@@ -1,0 +1,76 @@
+git init -------------------------------- Crear un repositorio en git con la carpeta actual como raiz.
+git add archivo ------------------------- Se agregan el archivos a memoria ram para posteriormente hacerle un commit.
+git add . ------------------------------- Agrega todos los archivos de la carpeta.
+git status ------------------------------ Muestra el estatus del repositorio.
+git log archivo ------------------------- Muestra los cambios hechos al archivo.
+git - rm --cached archivo --------------- Se borra el archivo de ram despues de haberle hecho un add.
+git config --list ----------------------- Muestra la configuración actual de git.
+git config ------------------------------ Muestra todas las funciones disponibles.
+git config --global user.name "nombre" -- Cambia el nombre de usuario de la configuración git.
+git config --global user.email "email" -- Cambia el e-mail del usario.
+git commit -m "mensaje" ----------------- Guarda el archivo o los cambios al archivo en el repositorio git.
+git log archivo ------------------------- Muestra los commits realizados al archivo.
+
+
+git show archivo ------------------------ Muestra los cambios que hubo en el archivo.
+git diff id1 id2 ------------------------ Hace una comparación entre las dos versiones indicadas.
+
+git reset id --soft --------------------- Optenemos una de las versiones anteriores del archivo.
+git reset id --hard --------------------- Borra todos los cambios y restaura la conserva la versión indicada.
+git diff -------------------------------- Puedo ver los cambios entre un archivo que esta en staging y el que tenemos guardado en la computadora.
+git log --stat -------------------------- Muestra los cambios realizados de forma más extensa.
+git checkout id archivo ----------------- Te muestra la versión indicada del archivo.
+git checkout master archivo ------------- MUestra la versión master del archivo.
+git rm --cached ------------------------- Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.
+git rm --force -------------------------- Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
+git reset --soft ------------------------ Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging, así podemos aplicar las últimas actualizaciones a un nuevo commit.
+git reset --hard ------------------------ Borra todo. Todo todito, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.
+git reset HEAD -------------------------- Este es el comando para sacar archivos del área de Staging. No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
+
+
+git commit -am "mensaje" --------------- Hace add commit en una sola linea solo a documentos que ya viven en el repocitorio.
+git branch nombre ---------------------- Se crea una nueva rama.
+git checkout nombre -------------------- Nos movemos del master a una de las ramas.
+git checkout master -------------------- Vovlemos a la rama master.
+
+
+git branch ----------------------------- Muestra las ramas que tenemos y muestra en que rama estamos.
+git merge rama ------------------------- Fusiona el último commit de la rama en la que no encontramos con el de la rama indicada.
+
+
+GITHUB
+git remote add origin url ------------- Llevamos nuestro repocitorio git a github.
+git remote rm origin ------------------ Eliminamos el origin.
+git remote -v ------------------------- Vemos acciones a realizar.
+git pull origin master ---------------- Traemos los archivos de github a git.
+git pull origin master --allow-unrelated-histories -Fusiona.
+git push origin master ---------------- Enviamos nuestro master a github.
+Siempre antes de hacer un git push se debe hacer un git pull.
+
+Llaves SSH
+ssh-keygen -t rsa -b 4096 -C "email" -- Creamos una llave SSH.
+eval $(ssh-agent -s) ------------------ Enciende el servidor de llaves SSH del ordenador.
+ssh-add rutallaveprivada -------------- Añadimos la llave SSH al servidor.
+
+
+Conexión GitHub con SSH
+git remote set-url origin url(SSH) -------- Cambiamos la url de origin(puede ser SSH).
+
+
+git log --graph --decorate --oneline ------ Muestra los cambios realizados de forma gráfica y organizada.
+arbolito ---------------------------------- Alias del comando anterior.
+
+
+Tags y versiones
+git tag -a nombre -m "mensaje" id -------- Creamos un tag.
+git tag ---------------------------------- MUestra los tags hechos.
+git show-ref --tags ---------------------- Muestra a que commit esta conectado el tag.
+git push origin --tags ------------------- Subimos nuestros tags a GitHub.
+git tag -d nombre ------------------------ Elimina un tag(solo se elimina de git).
+git push origin :refs/tags/nombre -------- Elimina el tag tambien de GitHub. 
+
+Manejo de ramas
+git show-branch -------------------------- Nos muestra las ramas que hay y sus cambios.
+git show --all --------------------------- Muestra el cambio en las ramas de forma más extensa. 
+gitk ------------------------------------- Software que muestra la historia de las ramas.
+git push origin nombre ------------------- Enviamos la rama indicada a GitHub. Se debe estar en la rama para poder hacerlo.
