@@ -1,3 +1,5 @@
+Notas realizadas del curso profesional de Git y GitHub.
+
 git init -------------------------------- Crear un repositorio en git con la carpeta actual como raiz.
 git add archivo ------------------------- Se agregan el archivos a memoria ram para posteriormente hacerle un commit.
 git add . ------------------------------- Agrega todos los archivos de la carpeta.
