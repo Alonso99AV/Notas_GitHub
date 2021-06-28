@@ -76,3 +76,66 @@ git show-branch -------------------------- Nos muestra las ramas que hay y sus c
 git show --all --------------------------- Muestra el cambio en las ramas de forma más extensa. 
 gitk ------------------------------------- Software que muestra la historia de las ramas.
 git push origin nombre ------------------- Enviamos la rama indicada a GitHub. Se debe estar en la rama para poder hacerlo.
+
+
+Colaboradores en GitHub
+git clone url ---------------------------- Clonamos un repocitorio de GitHub.
+git push origin footer ------------------- Traemos toda la rama footer a nuestro computador.
+
+
+Actualizar el repocitorio Fork
+git remote add upstream url -------------- Crea una fuente nueva para traer datos a la rama master.
+git pull upstream master ----------------- Se traen todos los cambios de master.
+Despues se hacer git commit y git push para actualizar el repocitorio GitHub.
+
+
+Ignorar archivos en repocitorio.
+Creamos un archivo en la raiz lla mado .gitignore con la lista de los archivos a ignorar dentro. Ej (*.jpg) ignora todos los .jpg.
+
+
+git rebase rama -------------------------- "Fusiona ramas eliminando registros"
+
+Git Stash
+git stash -------------------------------- Regresa el archivo a un estado anterior y guarda el cambio.
+git stash pop ---------------------------- Vuelve todo a como estaba.
+git stash list --------------------------- Muestra los stash que tenemos en memoria en el momento.
+git stash branch rama -------------------- Crea una nueva rama con los cambios que había en el stash.
+gir stash drop --------------------------- Eliminamos el stash de memoria.
+
+
+Clean
+git clean --dry-run ---------------------- Mestra todo lo que se eliminará.
+git clean -f ----------------------------- Elimina.
+
+
+Git cherry-pick
+git cherry-pick id ----------------------- Traes solo el  cambio del commit que le indiquemos a nuestra rama desde alguna otra rama.
+
+
+git commit --amend ----------------------- Agraga un nuevo cambio que hayamos hecho al último commit en caso 
+                                           de que se nos hubiera olvidado hacer alguna modificación más. Se necesita haber hecho add con anterioridad.
+
+Git Reset y Reflog
+git reflog ------------------------------- Muestra todos lso cambios hechos, incluso los borrados.
+git reset --HARD id ---------------------- Regresa el repocitorio a un estado anterior que le indicamos. (Eliminamos errores que hayamos realizado).
+
+
+Grep y log
+git grep palabra ------------------------- Busca todos los lugares donde se haya utilizado dicha palabra.
+git grep -n palabra ---------------------- Dice las lineas en las que se utilizaron las palabras.
+git grep -c palabra ---------------------- Cuenta las veces que se utilizó la palabra.
+git log -S "palabra" --------------------- Muestra las veces que utilizaste la palabra en commit.
+
+
+Comandos
+git shortlog ---------------------------- Muestra los commits que hizo cada persona que trabajo en el proyecto.
+git shortlog -sn ------------------------ Muestra el número de coomits realizados por persona.
+git shortlog -sn --all ------------------ Muestra todos los comits incluidos los eliminados.
+git shortlog -sn --all --no-merges ------ Muestra los commits sin contar los merges.
+git config --global alias.nombre "comando" - Creamos un comando global en git.
+git blame -c archivo -------------------- Muestra quien hizo cada una de las partes del archivo.
+git blame rarchivo -Ln,m ---------------- Muestra quien modifico de la linea n a la m.       
+git comando --help ---------------------- Abre el manual de como funciona el comando.
+git branch -r --------------------------- Vemos las ramas remotas
+git branch -a --------------------------- Muestra las ramas locales y remotas.
+
