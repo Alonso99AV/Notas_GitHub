@@ -65,7 +65,7 @@ arbolito ---------------------------------- Alias del comando anterior.
 
 Tags y versiones
 git tag -a nombre -m "mensaje" id -------- Creamos un tag.
-git tag ---------------------------------- MUestra los tags hechos.
+git tag ---------------------------------- Muestra los tags hechos.
 git show-ref --tags ---------------------- Muestra a que commit esta conectado el tag.
 git push origin --tags ------------------- Subimos nuestros tags a GitHub.
 git tag -d nombre ------------------------ Elimina un tag(solo se elimina de git).
@@ -90,7 +90,7 @@ Despues se hacer git commit y git push para actualizar el repocitorio GitHub.
 
 
 Ignorar archivos en repocitorio.
-Creamos un archivo en la raiz lla mado .gitignore con la lista de los archivos a ignorar dentro. Ej (*.jpg) ignora todos los .jpg.
+Creamos un archivo en la raiz llamado .gitignore con la lista de los archivos a ignorar dentro. Ej (*.jpg) ignora todos los .jpg.
 
 
 git rebase rama -------------------------- "Fusiona ramas eliminando registros"
@@ -112,8 +112,7 @@ Git cherry-pick
 git cherry-pick id ----------------------- Traes solo el  cambio del commit que le indiquemos a nuestra rama desde alguna otra rama.
 
 
-git commit --amend ----------------------- Agraga un nuevo cambio que hayamos hecho al último commit en caso 
-                                           de que se nos hubiera olvidado hacer alguna modificación más. Se necesita haber hecho add con anterioridad.
+git commit --amend ----------------------- Agraga un nuevo cambio que hayamos hecho al último commit en caso de que se nos hubiera olvidado hacer alguna modificación más. Se necesita haber hecho add con anterioridad.
 
 Git Reset y Reflog
 git reflog ------------------------------- Muestra todos lso cambios hechos, incluso los borrados.
